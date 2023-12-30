@@ -1,38 +1,76 @@
 .App {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.darkmode {
+  background-color: rgba(0, 0, 0, 0.893);
+  color: white;
+}
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.album {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.album:hover {
+  transform: scale(1.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.album-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.album-description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+.pictures-container {
+  display: flex;
+  justify-content: space-between;
+}
+.picture {
+  width: 20%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+.picture img {
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  width: 100px;
+}
+
+.picture img:hover {
+  transform: scale(1.1);
+}
+
+.button {
+  background-color: #4caf50;
+  border: none;
   color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:hover {
+  background-color: #45a049;
 }
